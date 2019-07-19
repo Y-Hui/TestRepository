@@ -83,9 +83,10 @@
 禁止下拉！<br/>
 </div>
 </body>
+<script src="./test.js"></script>
 <script type="text/javascript">
 document.body.addEventListener('touchmove', function (e) {
-  e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
+  // e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
 }, {passive: false}); //passive 参数不能省略，用来兼容ios和android
 </script>
 </html>

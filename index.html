@@ -1,92 +1,65 @@
-<!DOCTYPE HTML>
-<html>
+<!--
+    通过swiper4.4.2隐藏微信下拉域名
+-->
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0,viewport-fit=cover">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-<meta name="format-detection" content="telephone=no">
-    <title>禁止下拉</title>
-    <style type="text/css">
-        .scroll{
-        position:absolute; 
-        overflow:scroll; 
-        -webkit-overflow-scrolling: touch; 
-        top:0; 
-        left:0; 
-        bottom:0; 
-        right:0;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>下拉隐藏微信域名</title>
+    <script src="../js/initSize.js"></script>
+    <script src="../js/swiper.min.js"></script>
+    <link rel="stylesheet" href="../css/swiper.min.css"/>
+    <style>
+        html, body {
+            position: relative;
+            height: 100%;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+        }
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        .swiper-slide {
+            height: auto;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            background:#ddd;
+            height:2000px;
+            font-size:.4rem;
+        }
+        .test{
+            position:fixed;
+            width:100%;
+            height:100%;
+            font-size:.3rem;
+            text-align:center;
+            line-height:2;
+        }
     </style>
 </head>
 <body>
-<div class="scroll" style="overflow: auto">
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-禁止下拉！<br/>
-</div>
+    <div class="test">嘿嘿</div>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">            
+            <div class="swiper-slide">
+                页面内容~~~
+            </div>
+        </div>
+    </div>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            freeMode: true,
+            // scrollbar: {
+            //     el: '.swiper-scrollbar',
+            // },
+            mousewheel: true,
+        });     
+    </script>
 </body>
-<script src="./test.js"></script>
-<script type="text/javascript">
-document.body.addEventListener('touchmove', function (e) {
-  // e.preventDefault(); //阻止默认的处理方式(阻止下拉滑动的效果)
-}, {passive: false}); //passive 参数不能省略，用来兼容ios和android
-</script>
 </html>

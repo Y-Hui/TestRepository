@@ -101,6 +101,8 @@
         </div>
     </div>
     <script>
+	    let sayhello = new window.SpeechSynthesisUtterance('你好，欢迎来到 Jartto 的博客！');
+window.speechSynthesis.speak(sayhello);
 	    window.onload = function () {
     document.body.addEventListener('touchmove', function (e) {
       e.preventDefault()

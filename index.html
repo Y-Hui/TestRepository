@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function (position) {
+          var longitude = position.coords.longitude;
+          var latitude = position.coords.latitude;
+          document.write(`log:${longitude},lat:${latitude}`)
+          console.log(longitude)
+          console.log(latitude)
+        },
+        function (e) {
+          var msg = e.code;
+          var dd = e.message;
+          console.log(msg)
+          console.log(dd)
+        }
+      )
+    }
+  </script>
+</body>
+
+</html>
